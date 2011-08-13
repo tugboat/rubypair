@@ -3,6 +3,7 @@
     <%= image_tag("http://www.gravatar.com/avatar.php?gravatar_id=#{user.gravatar_id}") %>
   </p>
   <p>
-    <%= link_to "#{user.name} (#{user.github_login})", user.github_url %>
+    <%= link_to "Github: #{user.name} (#{user.github_login})", user.github_url %>
+    Interested in remote pairing: <%= display_remote_paring(user.profile.interested_in_remote) %>
   </p>
 </li>
