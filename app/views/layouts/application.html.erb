@@ -8,14 +8,22 @@
     <%= yield(:head) %>
   </head>
   <body>
+    <div id="header">
+      <ul>
+        <li>
+          <% if current_user %>
+            Welcome <%= current_user.github_login %>!
+            <%= link_to "Sign Out", signout_path %>
+          <% else %>
+            <%= link_to "Sign in with Github", "/auth/github" %>
+          <% end %>
+        </li>
+        <li>
+          <a href="#">Pairing Profile</a>
+        </li>
+      </ul>
+    </div>
     <div id="container">
-
-      <% if current_user %>
-        Welcome <%= current_user.github_login %>!
-        <%= link_to "Sign Out", signout_path %>
-      <% else %>
-        <%= link_to "Sign in with Github", "/auth/github" %>
-      <% end %>
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>
