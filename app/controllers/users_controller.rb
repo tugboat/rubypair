@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
   def github_auth_callback
-    auth_hash = request.env['omniauth.auth']
+    raise request.env['omniauth.auth'].to_yml
   end
 end
