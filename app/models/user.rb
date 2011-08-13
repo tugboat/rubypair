@@ -7,5 +7,11 @@ class User
   field :blog_url,     type: String
   field :gravatar_id,  type: String
   field :location,     type: String
+
+  embeds_one :profile
+
+  after_create do
+    create_profile
+  end
 end
 

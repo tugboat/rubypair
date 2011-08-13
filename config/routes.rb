@@ -3,4 +3,6 @@ Rubypair::Application.routes.draw do
   match '/signout' => 'sessions#destroy'
 
   root :to => "home#index"
+
+  resource :profile, :only => [:edit, :update]
 end

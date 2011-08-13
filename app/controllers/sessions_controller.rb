@@ -5,7 +5,13 @@ class SessionsController < ApplicationController
 
     login = user_hash['login']
     user = User.where(github_login: login).first
+
+    flash[:notice] = "You have successfully signed in!"
+
     if user
+      session[:github_login] = user.github_login
+      redirect_target = :root
+    else
       user = User.new
       user.github_login = login
       user.email = user_info['email']
@@ -14,14 +20,9 @@ class SessionsController < ApplicationController
       user.gravatar_id = user_hash['gravatar_id']
       user.location = user_hash['location']
       user.save!
-      redirect_target = :root
-    else
-      redirect_target = :profile
+      session[:github_login] = user.github_login
+      redirect_target = :edit_profile
     end
-
-    session[:github_login] = user.github_login
-
-    flash[:notice] = "You have successfully signed in!"
 
     redirect_to redirect_target
   end

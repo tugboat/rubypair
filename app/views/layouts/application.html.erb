@@ -10,17 +10,19 @@
   <body>
     <div id="header">
       <ul>
-        <li>
-          <% if current_user %>
-            Welcome <%= current_user.github_login %>!
-            <%= link_to "Sign Out", signout_path %>
-          <% else %>
+        <% if current_user %>
+          <li>
+              Welcome <%= current_user.github_login %>!
+              <%= link_to "Sign Out", signout_path %>
+          </li>
+          <li>
+            <a href="<%= edit_profile_path %>">Pairing Profile</a>
+          </li>
+        <% else %>
+          <li>
             <%= link_to "Sign in with Github", "/auth/github" %>
-          <% end %>
-        </li>
-        <li>
-          <a href="#">Pairing Profile</a>
-        </li>
+          </li>
+        <% end %>
       </ul>
     </div>
     <div id="container">
