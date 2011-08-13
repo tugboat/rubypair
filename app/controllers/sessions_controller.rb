@@ -14,6 +14,7 @@ class SessionsController < ApplicationController
     else
       user = User.new
       user.github_login = login
+      user.name = user_info['name']
       user.email = user_info['email']
       user.github_url = user_info['urls']['GitHub']
       user.blog_url = user_info['urls']['Blog']
