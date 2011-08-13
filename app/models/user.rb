@@ -1,5 +1,6 @@
 class User
   include Mongoid::Document
+  include Mongoid::Timestamps
 
   field :github_login, type: String
   field :email,        type: String
@@ -11,7 +12,7 @@ class User
   embeds_one :profile
 
   after_create do
-    create_profile
+    create_profile(interested_in_remote: true)
   end
 end
 
