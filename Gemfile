@@ -21,6 +21,8 @@ gem 'rspec'
 gem 'rspec-rails'
 gem 'cucumber'
 
+gem 'omniauth'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

@@ -39,5 +39,9 @@ module Rubypair
 
     # Enable the asset pipeline
     config.assets.enabled = true
+
+    require 'oa-oauth'
+    config.middleware.use OmniAuth::Strategies::GitHub, 'CONSUMER_KEY', 'CONSUMER_SECRET'
+
   end
 end
