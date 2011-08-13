@@ -1,1 +1,11 @@
-Ohai, <%= current_user.profile.id %>
+<%= form_for current_user, :url => profile_path do |f| %>
+  <%= f.fields_for :profile do |p| %>
+    <p>
+      <%= p.label :interested_in_remote, "Open to remote pairing?" %>
+      <%= p.check_box :interested_in_remote %>
+    </p>
+  <% end %>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

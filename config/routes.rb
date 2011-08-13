@@ -4,5 +4,5 @@ Rubypair::Application.routes.draw do
 
   root :to => "home#index"
 
-  resource :profile, :only => [:edit, :update]
+  resource :profile, :only => [:edit, :update, :show]
 end
