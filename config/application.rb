@@ -41,7 +41,6 @@ module Rubypair
     config.assets.enabled = true
 
     require 'oa-oauth'
-    config.middleware.use OmniAuth::Strategies::GitHub, 'CONSUMER_KEY', 'CONSUMER_SECRET'
-
+    config.middleware.use OmniAuth::Strategies::GitHub, '3edac2b8f0d777cdaa6a', ENV['GITHUB_OAUTH_SECRET']
   end
 end
