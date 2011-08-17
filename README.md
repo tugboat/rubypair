@@ -17,11 +17,11 @@ Future:
 # Get up and running
 
 1.  Fork the repo [It's just this easy](http://help.github.com/fork-a-repo/)
-2.  Clone your shiny new repo '''git clone git@github.com:username/rubypair.git'''
-3.  Get you some bundler '''gem install bundler'''
-4.  Get you some gems '''bundle install'''
-5.  Copy the example config file into the config directory '''cp config/examples/app_config.yml config/'''
-6.  Register your application (This makes authentication work) [http://github.com/account/applications/new](Register Here!)
-  - Main URL for development may vary some but mine is '''http://localhost:3000''' since I just use Webrick
-  - Callback URL is '''http://localhost:3000/auth/github''' adjust your accordingly.
+2.  Clone your shiny new repo ```git clone git@github.com:username/rubypair.git```
+3.  Get you some bundler ```gem install bundler```
+4.  Get you some gems ```bundle install```
+5.  Copy the example config file into the config directory ```cp config/examples/app_config.yml config/```
+6.  Register your application (This makes authentication work) [Register Here!](http://github.com/account/applications/new)
+  - Main URL for development may vary some but mine is ```http://localhost:3000``` since I just use Webrick
+  - Callback URL is ```http://localhost:3000/auth/github``` adjust your accordingly.
 7.  There is no 7!  You should be ready to hack.  
