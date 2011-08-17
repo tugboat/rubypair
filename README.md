@@ -1,7 +1,7 @@
 # Overview
 This is an idea that came up during a break at a daylong session at Lone Star Ruby Conference and I quick registered the domain name. I thought it would be fun to find people who are willing to pair program in your area. So this is this start of such a project. Hopefully I can find others to help me with it and get it going (and keep me on it). 
 
-Plan
+## Plan:
 * Page where Developers can login and make a profile, including the following:
   - twitter, linked in profiles, github
   - areas of code you like (tests, views, database, etc)
@@ -11,7 +11,7 @@ Plan
 * Page to search/browse people similar to you
 * Comment on profile (talk positively how it was to pair with that person)
 
-Future:
+## Future:
 * Maybe a reward system (stars? rubyies?) that people can award someone who was helpful. Maybe sponsors can offer prizes.
 
 # Get up and running
